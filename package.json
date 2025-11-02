@@ -1,7 +1,22 @@
 {
-  "name": "playwright-nav-test",
+  "name": "c",
   "version": "1.0.0",
+  "description": "Описание задания ------------------ Вам даётся простой статический сайт из трёх страниц: `index.html`, `about.html`, `contact.html` (папка `pages/`). В каждой странице есть навигация (ссылки между страницами) и заголовок `h1`, который отображает название страницы.",
+  "homepage": "https://github.com/unionblack/playwright-nav-test#readme",
+  "bugs": {
+    "url": "https://github.com/unionblack/playwright-nav-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unionblack/playwright-nav-test.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "npx playwright test --config=playwright.config.js",
     "test:headed": "npx playwright test --headed --config=playwright.config.js"

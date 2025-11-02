@@ -16,7 +16,7 @@ test.describe('Site navigation', () => {
     await expect(page).toHaveTitle('About');
   });
 
-    test('Contact link navigates to Contact and H1 updates', async ({ page }) => {
+  test('Contact link navigates to Contact and H1 updates', async ({ page }) => {
     await page.click('a[href="contact.html"]');
     await expect(page).toHaveURL(/contact\.html$/);
     await expect(page.locator('h1')).toHaveText('Contact');
