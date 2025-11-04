@@ -7,12 +7,15 @@ test.describe('Site navigation', () => {
 
   test('Home page shows Home <h1>', async ({ page }) => {
     await expect(page.locator('h1')).toHaveText('Home');
+    // Дополнительная проверка
+    await expect(page).toHaveTitle('Home');
   });
 
   test('About link navigates to About and H1 updates', async ({ page }) => {
     await page.click('a[href="about.html"]');
     await expect(page).toHaveURL(/about\.html$/);
     await expect(page.locator('h1')).toHaveText('About');
+    // Дополнительная проверка
     await expect(page).toHaveTitle('About');
   });
 
@@ -20,6 +23,7 @@ test.describe('Site navigation', () => {
     await page.click('a[href="contact.html"]');
     await expect(page).toHaveURL(/contact\.html$/);
     await expect(page.locator('h1')).toHaveText('Contact');
+    // Дополнительная проверка
     await expect(page).toHaveTitle('Contact');
   });
 
